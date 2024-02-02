@@ -1,0 +1,175 @@
+/* start global */
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+body {
+    font-family: 'Karla', sans-serif; 
+    /* font-size: 16px; */
+    display: grid;
+    place-items: center;
+    min-height: 100dvh;
+    background: var(--Light-Gray);
+}
+@media(max-width:600px){
+    body {
+        padding: 1rem;
+    }
+}
+/* end  global */
+/* start card */
+.card {
+    width: 50rem;
+    display: grid;
+    grid-template-columns:repeat(2 , 1fr);
+    grid-template-rows: repeat(2 , 1fr);
+    box-shadow: 0 0 12px 24px rgba(0, 0, 0, 0.015);
+}
+@media(max-width:600px){
+    .card {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3 , auto);
+        width: 21.8rem;
+    }
+}
+.card .join {
+    grid-column: span 2;
+    background-color: white;
+    padding: 2.5rem;
+    border-top-right-radius: .5rem;
+    border-top-left-radius: .5rem;
+}
+@media(max-width:600px){
+    .card .join {
+        grid-column: auto;
+        padding: 2rem;
+    }
+}
+.card .join h1 {
+    color: var(--Cyan);
+    font-weight: 700;
+    font-size: 2rem;
+}
+@media(max-width:600px){
+    .card .join h1 {
+        font-size: 1.5rem;
+    }
+}
+.card .join p:first-of-type{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--Bright-Yellow);
+    font-weight: 700;
+}
+@media(max-width:600px){
+    .card .join p:first-of-type {
+        font-size: 1rem;
+    }
+}
+.card .join p:last-of-type{
+    width: 80%;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--Grayish-Blue);
+}
+@media(max-width:600px){
+    .card .join p:last-of-type {
+        width: 100%;
+    }
+}
+.card .sub  {
+    background-color: var(--Cyan);
+    padding: 2.5rem;
+    border-bottom-left-radius: .5rem;
+}
+@media(max-width:600px){
+    .card .sub{
+        border-bottom-left-radius: 0;
+        padding: 2rem;
+    }
+}
+.card .sub h2 {
+    color: white;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+.card .sub p:first-of-type{
+    color: hsl(204, 43%, 93% , 0.7) ;
+    margin-bottom: .5rem;
+}
+.card  .sub p:first-of-type span {
+   font-size: 2.5rem;
+   margin-right: .5rem;
+   color: white;
+   font-weight: 700;
+}
+.card .sub p:last-of-type{
+    margin-bottom: 2rem;
+    color: var(--Light-Gray);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+@media(max-width:600px){
+    .card .sub p:last-of-type{
+        font-size: 1rem;
+    }
+}
+.card .sub button {
+    width: 90%;
+    padding: 1rem ;
+    border: 1px solid var(--Cyan);
+    border-radius: .5rem;
+    background-color: var(--Bright-Yellow);
+    color: white;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: .3s;
+}
+.card .sub button:hover {
+background-color: hsl(71, 73%, 54% , 0.6);
+}
+@media(max-width:600px){
+    .card .sub button {
+        width: 100%;
+    }
+}
+.card .why-us {
+    background-color: hsl(179, 62%, 43% , 0.8);
+    padding: 2.5rem;
+    border-bottom-right-radius: .5rem;
+}
+@media(max-width:600px){
+    .card .why-us {
+        border-bottom-left-radius: .5rem;
+        padding: 2rem;
+    }
+
+}
+.card .why-us h2 {
+    color: white;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.card .why-us pre {
+    width: 70%;
+    line-height: 1.5;
+    color: hsl(204, 43%, 93% , 0.7);
+    font-family: inherit;
+
+
+}
+
+
+/* end card */
